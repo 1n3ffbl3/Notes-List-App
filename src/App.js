@@ -36,23 +36,36 @@ const initialStateItems = [
 class App extends React.Component {
 	state = {
 		items: [...initialStateItems],
-	}
+	};
 
-	addItem = (event) => {
+	addItem = event => {
 		event.preventDefault();
-		console.log(event.target.value);
+
+		const newItem = {
+			name: event.target[0].value,
+			twitterLink: event.target[1].value,
+			image: event.target[2].value,
+			description: event.target[3].value,
+		};
+
+		this.setState(prevState => ({
+			items: [...prevState.items, newItem],
+		}));
+
+		event.target.reset();
 	};
 
 	render() {
+		console.log('render');
 		return (
 			<>
 				<ListWrapper
 					items={this.state.items}
 				/>
-				<Form sumbitFn={this.addItem} />
+				<Form submitFn={this.addItem} />
 			</>
 
-		)
+		);
 	}
 }
 

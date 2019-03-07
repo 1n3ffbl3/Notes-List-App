@@ -15,31 +15,34 @@ const Form = ({ submitFn }) => (
 					id="name"
 					maxLength="30"
 				/>
-				<label htmlForm="name">Name</label>
+				<label htmlFor="name">Name</label>
 				<div className="forms__item__bar"></div>
 			</div>
 			<div className="form__item">
 				<input
 					placeholder=""
 					name="link"
+					id="link"
 				/>
-				<label htmlForm="link">Link</label>
+				<label htmlFor="link">Link</label>
 				<div className="forms__item__bar"></div>
 			</div>
 			<div className="form__item">
 				<input
 					placeholder=""
 					name="image"
+					id="link"
 				/>
-				<label htmlForm="image">Image</label>
+				<label htmlFor="image">Image</label>
 				<div className="forms__item__bar"></div>
 			</div>
 			<div className="form__item">
 				<textarea
 					placeholder=""
 					name="description"
+					id="description"
 				/>
-				<label htmlForm="description">Description</label>
+				<label htmlFor="description">Description</label>
 				<div className="forms__item__bar"></div>
 			</div>
 			<button
@@ -47,7 +50,7 @@ const Form = ({ submitFn }) => (
 				className="form__button"
 			>
 				add new item
-		</button>
+			</button>
 		</form >
 	</div>
 );
