@@ -33,7 +33,7 @@ ListItem.propTypes = {
 };
 
 ListItem.defaultProps = {
-	description: 'One of the React creators'
+	description: 'One of the React creators.'
 };
 
 export default ListItem;
