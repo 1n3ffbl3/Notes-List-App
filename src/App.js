@@ -5,8 +5,9 @@ import danAbramovImage from './assets/images/danabramov.jpg';
 import ryanFlorenceImage from './assets/images/ryanflorence.jpg';
 import michaelJacksonImage from './assets/images/michaeljackson.jpg';
 import kentCDoddsImage from './assets/images/kentcdodds.jpg';
+import Form from './components/Form/Form';
 
-const initialStateArray = [
+const initialStateItems = [
 	{
 		image: danAbramovImage,
 		name: 'Dan Abramov',
@@ -34,14 +35,21 @@ const initialStateArray = [
 ]
 class App extends React.Component {
 	state = {
-		items: [...initialStateArray],
+		items: [...initialStateItems],
 	}
+
+	addItem = (event) => {
+		event.preventDefault();
+		console.log(event.target.value);
+	};
+
 	render() {
 		return (
 			<>
 				<ListWrapper
 					items={this.state.items}
 				/>
+				<Form sumbitFn={this.addItem} />
 			</>
 
 		)
