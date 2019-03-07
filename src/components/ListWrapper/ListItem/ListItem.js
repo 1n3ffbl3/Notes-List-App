@@ -24,6 +24,7 @@ const ListItem = ({
 					href={twitterLink}
 					target="_blank"
 					className={styles.button}
+					rel="noopener noreferrer"
 				>visit twitter page</a>
 			</div>
 		</li>
