@@ -1,5 +1,5 @@
 import React from 'react';
-import ListWrapper from './components/ListWrapper/ListWrapper';
+import List from './components/List/List';
 import './index.css';
 import danAbramovImage from './assets/images/danabramov.jpg';
 import ryanFlorenceImage from './assets/images/ryanflorence.jpg';
@@ -59,7 +59,7 @@ class App extends React.Component {
 		console.log('render');
 		return (
 			<>
-				<ListWrapper
+				<List
 					items={this.state.items}
 				/>
 				<Form submitFn={this.addItem} />
