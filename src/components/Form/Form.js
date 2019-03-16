@@ -62,24 +62,11 @@ class Form extends React.Component {
 					>
 						Note
 					</Radio>
-					<Input
-						name="name"
-						label="Name"
-						maxLength={30}
-					/>
-					<Input
-						name="link"
-						label="Twitter Link"
-					/>
-					<Input
-						name="image"
-						label="Image"
-					/>
-					<Input
-						tag="textarea"
-						name="description"
-						label="Description"
-					/>
+					<Input name="name" label={type === types.twitter ? 'Twitter Name' : 'Title'} maxLength={30} />
+					{type !== types.note ? <Input name="link" label={type === types.twitter ? 'Twitter Link' : 'Link'} /> : null}
+
+					{type === types.twitter ? <Input name="image" label="Image" /> : null}
+					<Input tag="textarea" name="description" label="Description" />
 					<Button>add new item</Button>
 				</form>
 			</div >
