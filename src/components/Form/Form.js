@@ -41,29 +41,27 @@ class Form extends React.Component {
 					autoComplete="off"
 					className={styles.form}
 					onSubmit={this.props.submitFn}>
-					<div className={styles.formOptions}>
-						<Radio
-							id={types.twitter}
-							checked={type === types.twitter}
-							changeFn={() => this.handleRadioButtonChange(types.twitter)}
-						>
-							Twitter
+					<Radio
+						id={types.twitter}
+						checked={type === types.twitter}
+						changeFn={() => this.handleRadioButtonChange(types.twitter)}
+					>
+						Twitter
 					</Radio>
-						<Radio
-							id={types.article}
-							checked={type === types.article}
-							changeFn={() => this.handleRadioButtonChange(types.article)}
-						>
-							Article
+					<Radio
+						id={types.article}
+						checked={type === types.article}
+						changeFn={() => this.handleRadioButtonChange(types.article)}
+					>
+						Article
 					</Radio>
-						<Radio
-							id={types.note}
-							checked={type === types.note}
-							changeFn={() => this.handleRadioButtonChange(types.note)}
-						>
-							Note
+					<Radio
+						id={types.note}
+						checked={type === types.note}
+						changeFn={() => this.handleRadioButtonChange(types.note)}
+					>
+						Note
 					</Radio>
-					</div>
 					<Input
 						name="name"
 						label="Name"
