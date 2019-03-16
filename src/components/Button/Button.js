@@ -29,11 +29,12 @@ const Button = ({ children, href, secondary }) => {
 };
 
 Button.propTypes = {
-	href: PropTypes.string.isRequired,
+	href: PropTypes.string,
 	secondary: PropTypes.string,
 };
 
 Button.defaultProps = {
+	href: null,
 	secondary: null,
 };
 
