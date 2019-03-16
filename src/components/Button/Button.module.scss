@@ -5,5 +5,13 @@
     font-weight: 500;
     background: none;
     border: 2px solid #1E58FF;
-    color: #1E58FF;
+	color: #1E58FF;
+	cursor: pointer;
+}
+
+.secondary {
+	@extend .button;
+
+	background-color: #1E58FF;
+	color: white;
 }
