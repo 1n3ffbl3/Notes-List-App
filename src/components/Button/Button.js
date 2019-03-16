@@ -30,7 +30,7 @@ const Button = ({ children, href, secondary, ...props }) => {
 
 Button.propTypes = {
 	href: PropTypes.string,
-	secondary: PropTypes.string,
+	secondary: PropTypes.bool,
 };
 
 Button.defaultProps = {
