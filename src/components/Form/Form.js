@@ -49,7 +49,7 @@ class Form extends React.Component {
 						<form
 							autoComplete="off"
 							className={styles.form}
-							onSubmit={context.addItem}>
+							onSubmit={(event) => context.addItem(event, this.state)}>
 							<Radio
 								id={types.twitter}
 								checked={type === types.twitter}
