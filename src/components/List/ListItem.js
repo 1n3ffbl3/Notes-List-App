@@ -6,27 +6,27 @@ import Title from '../Title/Title';
 
 const ListItem = ({
 	image,
-	name,
+	title,
 	description,
-	twitterLink
+	link
 }) => {
 
 	const ImageTag = image ? 'img' : 'div';
 	return (
 		< li className={styles.wrapper} >
-			<ImageTag
+			{image && <ImageTag
 				src={image}
 				className={image ? styles.image : styles.imageNone}
-				alt={name}
-			/>
+				alt={title}
+			/>}
 			<div>
-				<Title>{name}</Title>
+				<Title>{title}</Title>
 				<p className={styles.description}>
 					{description}
 				</p>
-				<Button href={twitterLink}>
+				{link && <Button href={link}>
 					visit twitter page
-				</Button>
+				</Button>}
 			</div>
 		</li >
 	)
@@ -34,14 +34,14 @@ const ListItem = ({
 
 ListItem.propTypes = {
 	image: PropTypes.string,
-	name: PropTypes.string.isRequired,
-	description: PropTypes.string,
-	twitterLink: PropTypes.string.isRequired
+	link: PropTypes.string,
+	title: PropTypes.string.isRequired,
+	description: PropTypes.string.isRequired,
 };
 
 ListItem.defaultProps = {
 	image: null,
-	description: 'One of the React creators.'
+	link: null,
 };
 
 export default ListItem;
